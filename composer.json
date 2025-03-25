@@ -1,5 +1,5 @@
 {
-    "name": "gobrightspot/nova-detached-actions",
+    "name": "gobrightspot/nova-detached-actions-dev",
     "description": "A Laravel Nova tool to allow for placing actions in the Nova toolbar detached from the checkbox selection mechanism.",
     "keywords": [
         "laravel",
@@ -7,14 +7,14 @@
         "detached actions"
     ],
     "license": "MIT",
-    "require": {
-        "php": ">=7.1.0",
-        "laravel/nova": "^5.0"
-    },
     "autoload": {
         "psr-4": {
             "Brightspot\\Nova\\Tools\\DetachedActions\\": "src/"
         }
+    },
+    "require": {
+        "laravel/nova": "^5.0",
+        "gobrightspot/nova-detached-actions": "dev-master"
     },
     "extra": {
         "laravel": {
