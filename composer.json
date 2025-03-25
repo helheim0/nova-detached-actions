@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
-        "laravel/nova": "^4.0"
+        "laravel/nova": "^5.0"
     },
     "autoload": {
         "psr-4": {
@@ -27,11 +27,15 @@
         {
             "type": "composer",
             "url": "https://nova.laravel.com"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/helheim0/nova-detached-actions"
         }
     ],
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }

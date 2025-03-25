@@ -331,16 +331,20 @@ abstract class DetachedAction extends Action
      *
      * @return array
      */
-    public function jsonSerialize() :array
+    public function jsonSerialize(): array
     {
-        return array_merge([
-            'detachedAction' => true,
-            'label' => $this->label(),
-            'showOnIndexToolbar' => $this->shownOnIndexToolbar(),
-            'showOnDetailToolbar' => $this->shownOnDetailToolbar(),
-            'classes' => $this->getClasses(),
-            'icon' => $this->icon,
-            'iconClasses' => $this->iconClasses,
-        ], parent::jsonSerialize(), $this->meta());
+        return array_merge(
+            parent::jsonSerialize(),
+            [
+                'detachedAction' => true,
+                'label' => $this->label(),
+                'showOnIndexToolbar' => $this->shownOnIndexToolbar(),
+                'showOnDetailToolbar' => $this->shownOnDetailToolbar(),
+                'classes' => $this->getClasses(),
+                'icon' => $this->icon,
+                'iconClasses' => $this->iconClasses,
+            ],
+            $this->meta()
+        );
     }
 }
